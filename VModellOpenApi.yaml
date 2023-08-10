@@ -1,0 +1,121 @@
+openapi: 3.0.0
+info:
+  title: V-Modell API
+  description: this is the OpenAPI for V-Modell.
+  version: 0.1.0
+servers:
+  - url: 'https://vm-api.weit-verein.de/'
+  - url: 'http://localhost:8083'
+paths:
+    /status:
+        $ref: "./paths/Status.yaml"
+    /V-Modellmetamodell:
+        $ref: "./paths/VModellmetamodelle.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}:
+        $ref: "./paths/VModellmetamodell.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante:
+        $ref: "./paths/VModellvarianten.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}:
+        $ref: "./paths/VModellvariante.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttypvariante:
+        $ref: "./paths/Projekttypvarianten.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttypvariante/{ProjekttypvarianteID}:
+        $ref: "./paths/Projekttypvariante.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp:
+        $ref: "./paths/Projekttypen.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}:
+        $ref: "./paths/Projekttyp.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projektmerkmal:
+        $ref: "./paths/Projektmerkmale.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projektmerkmal/{ProjektmerkmalID}:
+        $ref: "./paths/Projektmerkmal.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projektmerkmal/{ProjektmerkmalID}/Wert:
+        $ref: "./paths/Werte.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projektmerkmal/{ProjektmerkmalID}/Wert/{WertID}:
+        $ref: "./paths/Wert.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Textbaustein:
+        $ref: "./paths/Textbausteine.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Textbaustein/{TextbausteinID}:
+        $ref: "./paths/Textbaustein.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Werkzeugreferenz:
+        $ref: "./paths/Werkzeugreferenzen.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Werkzeugreferenz/{WerkzeugreferenzID}:
+        $ref: "./paths/Werkzeugreferenz.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Methodenreferenz:
+        $ref: "./paths/Methodenreferenzen.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Methodenreferenz/{MethodenreferenzID}:
+        $ref: "./paths/Methodenreferenz.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Quelle:
+        $ref: "./paths/Quellen.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Quelle/{QuelleID}:
+        $ref: "./paths/Quelle.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/V-Modell-Struktur:
+        $ref: "./paths/V-Modell-StrukturOhneNutzdaten.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/V-Modell-Struktur/{V-Modell-StrukturID}:
+        $ref: "./paths/V-Modell-Struktur.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/V-Modell-Struktur/{V-Modell-StrukturID}/Kapitel:
+        $ref: "./paths/KapitelPluralV-Modell-Struktur.yaml"
+    /V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/V-Modell-Struktur/{V-Modell-StrukturID}/Kapitel/{KapitelID}:
+        $ref: "./paths/KapitelV-Modell-Struktur.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Grafik/{GrafikPath}:
+        $ref: "./paths/TailoringGrafik.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Projektmerkmal:
+        $ref: "./paths/TailoringProjektmerkmaleNeeded.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Ablaufbaustein:
+        $ref: "./paths/TailoringAblaufbausteine.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Ablaufbaustein/{AblaufbausteinID}:
+        $ref: "./paths/TailoringAblaufbaustein.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Rollenkategorie:
+        $ref: "./paths/TailoringRollenkategorien.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Rollenkategorie/{RollenkategorieName}:
+        $ref: "./paths/TailoringRollenkategorie.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Ablaufbausteinspezifikation:
+        $ref: "./paths/Ablaufbausteinspezifikationen.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Ablaufbausteinspezifikation/{AblaufbausteinspezifikationID}:
+        $ref: "./paths/Ablaufbausteinspezifikation.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}:
+        $ref: "./paths/Tailoring.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Disziplin:
+        $ref: "./paths/TailoringDisziplinen.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Disziplin/{DisziplinID}:
+        $ref: "./paths/TailoringDisziplin.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Disziplin/{DisziplinID}/Produkt:
+        $ref: "./paths/TailoringProdukte.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Disziplin/{DisziplinID}/Produkt/{ProduktID}:
+        $ref: "./paths/TailoringProdukt.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Disziplin/{DisziplinID}/Produkt/{ProduktID}/Thema:
+        $ref: "./paths/TailoringThemen.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Disziplin/{DisziplinID}/Produkt/{ProduktID}/Thema/{ThemaID}:
+        $ref: "./paths/TailoringThema.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Entscheidungspunkt:
+        $ref: "./paths/TailoringEntscheidungspunkte.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Entscheidungspunkt/{EntscheidungspunktID}:
+        $ref: "./paths/TailoringEntscheidungspunkt.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/ExterneKopiervorlage:
+        $ref: "./paths/TailoringExterneKopiervorlagen.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/ExterneKopiervorlage/{ExterneKopiervorlageID}:
+        $ref: "./paths/TailoringExterneKopiervorlage.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Aktivitaet:
+        $ref: "./paths/TailoringAktivitäten.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Aktivitaet/{AktivitaetID}:
+        $ref: "./paths/TailoringAktivität.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Rolle:
+        $ref: "./paths/TailoringRollen.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Rolle/{RolleID}:
+        $ref: "./paths/TailoringRolle.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Vorgehensbaustein:
+        $ref: "./paths/TailoringVorgehensbausteine.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Vorgehensbaustein/{VorgehensbausteinID}:
+        $ref: "./paths/TailoringVorgehensbaustein.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Strukturabhaengigkeit:
+        $ref: "./paths/TailoringStrukturabhängigkeiten.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/Strukturabhaengigkeit/{StrukturabhaengigkeitID}:
+        $ref: "./paths/TailoringStrukturabhängigkeit.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/InhaltlicheAbhaengigkeitenGruppe:
+        $ref: "./paths/TailoringInhaltlicheAbhängigkeitenGruppen.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/InhaltlicheAbhaengigkeitenGruppe/{InhaltlicheAbhaengigkeitenGruppeID}:
+        $ref: "./paths/TailoringInhaltlicheAbhängigkeitenGruppe.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/ErzeugendeAbhaengigkeit:
+      $ref: "./paths/TailoringErzeugendeAbhängigkeiten.yaml"
+    /Tailoring/V-Modellmetamodell/{VModellmetamodellID}/V-Modellvariante/{VModellvarianteID}/Projekttyp/{ProjekttypID}/Projekttypvariante/{ProjekttypvarianteID}/ErzeugendeAbhaengigkeit/{ErzeugendeAbhaengigkeitID}:
+      $ref: "./paths/TailoringErzeugendeAbhängigkeit.yaml"
